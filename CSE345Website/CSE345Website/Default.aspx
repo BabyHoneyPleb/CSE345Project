@@ -2,41 +2,67 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    </div>
+   <div class="row">
+       <div class="col-md-3-4">
+           <asp:Panel ID="pnlLeft" runat="server" CssClass="pnl-left">
+               <asp:Panel ID="pnlTitle" runat="server" CssClass="pnl-title">
+                   <br />
+                   <br />
+                   <asp:Label ID="lblTitle" runat="server" Text="College Corner" CssClass="txt-title"></asp:Label>
+               </asp:Panel>
+               <br />
+               <br />
+               <asp:Calendar ID="cldEvents" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="258px" NextPrevFormat="FullMonth" Width="100%">
+                   <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
+                   <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
+                   <OtherMonthDayStyle ForeColor="#999999" />
+                   <SelectedDayStyle BackColor="#333399" ForeColor="White" />
+                   <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#333399" />
+                   <TodayDayStyle BackColor="#CCCCCC" />
+               </asp:Calendar>
+               <br />
+               <br />
+               <div style="text-align: center;">
+                   <asp:Button ID="btnOrganize" runat="server" Text="Organize Event" CssClass="btn btn-primary btn-lg" />
+               </div>           
+               <br />
+               <br />
+               <div style="text-align: center";>
+                    <asp:Button ID="btnPostItem" runat="server" Text="Post Item/Service" CssClass="btn btn-primary btn-lg" />
+               </div>
+           </asp:Panel>          
+       </div>
+      
+       <div class="col-md-8">
+           <br />
+           <br />
+           <asp:Panel ID="pnlUpcomingEvent" runat="server" CssClass="pnl-box">
+               <asp:Label ID="lblEventTitle" runat="server" Text="College Corner" CssClass="title-box"></asp:Label>       
+           </asp:Panel>
+           <br />
+           <br />
+           <asp:Panel ID="pnlFeatured" runat="server" CssClass="pnl-box">
+               <asp:Label ID="lblFeaturedTitle" runat="server" Text="College Corner" CssClass="title-box"></asp:Label>     
+           </asp:Panel>
+           <br />
+           <br />
+           <div class="row">
+               <div class="col-md-6">
+                   <asp:Label ID="lblSaleTitle" runat="server" Text="Label" CssClass="title-default" Font-Underline="True"></asp:Label>
+               </div>
+               <div class="col-md-6">
+                   <asp:Label ID="lblServiceTitle" runat="server" Text="Label" CssClass="title-default" Font-Underline="True"></asp:Label>
 
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
-        </div>
-    </div>
+               </div>
+
+           </div>
+           
+          
+
+       </div>
+
+   </div>
+
+
 
 </asp:Content>
