@@ -34,20 +34,20 @@
 .pnl-box{
     width:400px;
     height: 250px;
-    background-color: gold;
+    background-color: #d1c338;
     border-radius: 10px;
     padding: 10px;
 }
 .txt-title{
     text-align: center;   
     font-size: 40px;
-    color: black;
+    color: #d1c338;
     font: bold;
 }
 .title-default{
-     text-align: center;   
+    text-align: center;   
     font-size: 36px;
-    color: black;    
+    color: #d1c338;    
 }
 .title-box{
      text-align: left;   
@@ -55,7 +55,7 @@
     color: black;
 }
 .pnl-left{
-    background-color: gold;
+    background-color: #222222;
     height: 100%;
     width: 100%;
 }
@@ -2142,9 +2142,11 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-  color: #ffffff;
-  background-color: #428bca;
-  border-color: #357ebd;
+      color: #000000;
+      font: bold;
+      background-color: #d1c338;
+      border-color: #bdb135;
+  
 }
 
 .btn-primary:hover,
@@ -2153,8 +2155,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #3276b1;
-  border-color: #285e8e;
+  background-color: #ada232;
+  border-color: #a59b30;
 }
 
 .btn-primary:active,

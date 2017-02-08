@@ -12,13 +12,13 @@
                </asp:Panel>
                <br />
                <br />
-               <asp:Calendar ID="cldEvents" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="258px" NextPrevFormat="FullMonth" Width="100%">
+               <asp:Calendar ID="cldEvents" runat="server" BackColor="transparent" BorderColor="#d1c338" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="#d1c338" Height="258px" NextPrevFormat="FullMonth" Width="100%">
                    <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
-                   <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
-                   <OtherMonthDayStyle ForeColor="#999999" />
-                   <SelectedDayStyle BackColor="#333399" ForeColor="White" />
-                   <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#333399" />
-                   <TodayDayStyle BackColor="#CCCCCC" />
+                   <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#b7b7b7" VerticalAlign="Bottom" />
+                   <OtherMonthDayStyle ForeColor="#b7b7b7" />
+                   <SelectedDayStyle BackColor="#d1c338" ForeColor="Black" />
+                   <TitleStyle BackColor="transparent" BorderColor="#d1c338" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#d1c338" />
+                   <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
                </asp:Calendar>
                <br />
                <br />
@@ -30,9 +30,13 @@
                <div style="text-align: center";>
                     <asp:Button ID="btnPostItem" runat="server" Text="Post Item/Service" CssClass="btn btn-primary btn-lg" />
                </div>
+               <br />
+               <br />
            </asp:Panel>          
        </div>
-      
+       
+       
+       
        <div class="col-md-8">
            <br />
            <br />
@@ -52,15 +56,9 @@
                </div>
                <div class="col-md-6">
                    <asp:Label ID="lblServiceTitle" runat="server" Text="Label" CssClass="title-default" Font-Underline="True"></asp:Label>
-
                </div>
-
-           </div>
-           
-          
-
+           </div>      
        </div>
-
    </div>
 
 
