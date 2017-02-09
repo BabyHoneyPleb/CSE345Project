@@ -8,7 +8,18 @@
                <asp:Panel ID="pnlTitle" runat="server" CssClass="pnl-title">
                    <br />
                    <br />
-                   <asp:Label ID="lblTitle" runat="server" Text="College Corner" CssClass="txt-title"></asp:Label>
+                   <div class="row">
+                       <div class="col-md-4" style="text-align: center;">
+                           
+                            <asp:Image ID="Image1" runat="server" Height="96px" ImageUrl="~/OaklandGoldenGrizzlies.png" Width="83px" />
+                       </div>
+                       <div class="col-md-8">
+                           <asp:Label ID="lblTitle" runat="server" Text="College<br/>&nbsp;&nbsp;&nbsp;Corner" CssClass="txt-title"></asp:Label>
+                       </div>
+                   </div>
+                  
+                 
+                   
                </asp:Panel>
                <br />
                <br />
