@@ -41,12 +41,27 @@
            <br />
            <br />
            <asp:Panel ID="pnlUpcomingEvent" runat="server" CssClass="pnl-box">
-               <asp:Label ID="lblEventTitle" runat="server" Text="College Corner" CssClass="title-box"></asp:Label>       
+               <asp:Label ID="lblEventTitle" runat="server" Text="Upcoming Events" CssClass="title-box"></asp:Label>  
+               <br />
+               <asp:Panel ID="pnlUp1" runat="server" CssClass="pnl-inside"></asp:Panel>
+               <br />
+               <asp:Panel ID="pnlUp2" runat="server" CssClass="pnl-inside"></asp:Panel>
+               <br />
+               <asp:Panel ID="pnlUp3" runat="server" CssClass="pnl-inside"></asp:Panel>
+               <br />
+                    
            </asp:Panel>
            <br />
            <br />
            <asp:Panel ID="pnlFeatured" runat="server" CssClass="pnl-box">
-               <asp:Label ID="lblFeaturedTitle" runat="server" Text="College Corner" CssClass="title-box"></asp:Label>     
+               <asp:Label ID="lblFeaturedTitle" runat="server" Text="Featured" CssClass="title-box"></asp:Label>  
+               <br />
+               <asp:Panel ID="pnlFeat1" runat="server" CssClass="pnl-inside"></asp:Panel>
+               <br />
+               <asp:Panel ID="pnlFeat2" runat="server" CssClass="pnl-inside"></asp:Panel>
+               <br />
+               <asp:Panel ID="pnlFeat3" runat="server" CssClass="pnl-inside"></asp:Panel>
+               <br />
            </asp:Panel>
            <br />
            <br />

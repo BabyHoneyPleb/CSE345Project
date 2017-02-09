@@ -135,7 +135,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\sytlesheet.css" />
+    <Content Include="Content\stylesheet.css" />
     <Content Include="Events.aspx" />
     <Content Include="Classifieds.aspx" />
     <Content Include="Content\bootstrap.css" />

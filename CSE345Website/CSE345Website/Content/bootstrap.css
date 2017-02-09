@@ -23,43 +23,6 @@
 
 
 
-.divider{    
-    border-left: thick solid #999;    
-}
-.pnl-title{
-    width: 100%;
-    height: 150px;
-    text-align: center;
-}
-.pnl-box{
-    width:400px;
-    height: 250px;
-    background-color: #d1c338;
-    border-radius: 10px;
-    padding: 10px;
-}
-.txt-title{
-    text-align: center;   
-    font-size: 40px;
-    color: #d1c338;
-    font: bold;
-}
-.title-default{
-    text-align: center;   
-    font-size: 36px;
-    color: #d1c338;    
-}
-.title-box{
-     text-align: left;   
-    font-size: 26px;
-    color: black;
-}
-.pnl-left{
-    background-color: #222222;
-    height: 100%;
-    width: 100%;
-}
-
 
 article,
 aside,
