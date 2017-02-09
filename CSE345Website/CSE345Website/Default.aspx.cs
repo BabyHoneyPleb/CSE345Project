@@ -13,5 +13,13 @@ namespace CSE345Website
         {
 
         }
+        protected void On_Click_Events (object sender, EventArgs e)
+        {
+            Response.Redirect("~/Events");
+        }
+        protected void On_Click_Classifieds(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Classifieds");
+        }
     }
 }
