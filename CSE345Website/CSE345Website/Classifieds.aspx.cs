@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace CSE345Website
 {
-    public partial class Contact : Page
+    public partial class Classifieds : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
