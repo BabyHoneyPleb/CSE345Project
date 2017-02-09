@@ -103,6 +103,15 @@ namespace CSE345Website {
         protected global::System.Web.UI.WebControls.Panel pnlUp1;
         
         /// <summary>
+        /// lblP1Date control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblP1Date;
+        
+        /// <summary>
         /// pnlUp2 control.
         /// </summary>
         /// <remarks>
@@ -112,6 +121,15 @@ namespace CSE345Website {
         protected global::System.Web.UI.WebControls.Panel pnlUp2;
         
         /// <summary>
+        /// lblP2Date control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblP2Date;
+        
+        /// <summary>
         /// pnlUp3 control.
         /// </summary>
         /// <remarks>
@@ -119,6 +137,15 @@ namespace CSE345Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlUp3;
+        
+        /// <summary>
+        /// lblP3Date control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblP3Date;
         
         /// <summary>
         /// pnlFeatured control.
@@ -164,6 +191,15 @@ namespace CSE345Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlFeat3;
+        
+        /// <summary>
+        /// pnlRight control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlRight;
         
         /// <summary>
         /// lblSaleTitle control.

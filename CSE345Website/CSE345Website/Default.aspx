@@ -3,14 +3,13 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
    <div class="row">
-       <div class="col-md-3-4">
+       <div class="col-md-4">
            <asp:Panel ID="pnlLeft" runat="server" CssClass="pnl-left">
                <asp:Panel ID="pnlTitle" runat="server" CssClass="pnl-title">
                    <br />
                    <br />
                    <div class="row">
                        <div class="col-md-4" style="text-align: center;">
-                           
                             <asp:Image ID="Image1" runat="server" Height="96px" ImageUrl="~/OaklandGoldenGrizzlies.png" Width="83px" />
                        </div>
                        <div class="col-md-8">
@@ -47,43 +46,67 @@
        </div>
        
        
-       
-       <div class="col-md-8">
-           <br />
+       <div class="col-md-4">
            <br />
            <asp:Panel ID="pnlUpcomingEvent" runat="server" CssClass="pnl-box">
-               <asp:Label ID="lblEventTitle" runat="server" Text="Upcoming Events" CssClass="title-box"></asp:Label>  
+               <asp:Label ID="lblEventTitle" runat="server" Text="Upcoming Events" CssClass="title-box"></asp:Label>
                <br />
-               <asp:Panel ID="pnlUp1" runat="server" CssClass="pnl-inside"></asp:Panel>
+               <asp:Panel ID="pnlUp1" runat="server" CssClass="pnl-inside">
+                   <asp:Label ID="lblP1Date" runat="server" Text="Friday, February 10th, 2017 aT 8:00PM"></asp:Label>
+               </asp:Panel>
                <br />
-               <asp:Panel ID="pnlUp2" runat="server" CssClass="pnl-inside"></asp:Panel>
+               <asp:Panel ID="pnlUp2" runat="server" CssClass="pnl-inside">
+                   <asp:Label ID="lblP2Date" runat="server" Text="Friday, February 10th, 2017 aT 8:00PM"></asp:Label>
+               </asp:Panel>
                <br />
-               <asp:Panel ID="pnlUp3" runat="server" CssClass="pnl-inside"></asp:Panel>
+               <asp:Panel ID="pnlUp3" runat="server" CssClass="pnl-inside">
+                   <asp:Label ID="lblP3Date" runat="server" Text="Friday, February 10th, 2017 aT 8:00PM"></asp:Label>
+
+               </asp:Panel>
                <br />
-                    
+               
            </asp:Panel>
            <br />
            <br />
            <asp:Panel ID="pnlFeatured" runat="server" CssClass="pnl-box">
-               <asp:Label ID="lblFeaturedTitle" runat="server" Text="Featured" CssClass="title-box"></asp:Label>  
+               <asp:Label ID="lblFeaturedTitle" runat="server" Text="Featured" CssClass="title-box"></asp:Label>
                <br />
-               <asp:Panel ID="pnlFeat1" runat="server" CssClass="pnl-inside"></asp:Panel>
+               <asp:Panel ID="pnlFeat1" runat="server" CssClass="pnl-inside">
+               </asp:Panel>
                <br />
-               <asp:Panel ID="pnlFeat2" runat="server" CssClass="pnl-inside"></asp:Panel>
+               <asp:Panel ID="pnlFeat2" runat="server" CssClass="pnl-inside">
+               </asp:Panel>
                <br />
-               <asp:Panel ID="pnlFeat3" runat="server" CssClass="pnl-inside"></asp:Panel>
+               <asp:Panel ID="pnlFeat3" runat="server" CssClass="pnl-inside">
+               </asp:Panel>
                <br />
            </asp:Panel>
            <br />
            <br />
-           <div class="row">
-               <div class="col-md-6">
+       </div> 
+       <div class="col-md-4">
+           <asp:Panel ID="pnlRight" runat="server" CssClass="pnl-left">
+               <div>
                    <asp:Label ID="lblSaleTitle" runat="server" Text="Label" CssClass="title-default" Font-Underline="True"></asp:Label>
                </div>
-               <div class="col-md-6">
+               <div>
                    <asp:Label ID="lblServiceTitle" runat="server" Text="Label" CssClass="title-default" Font-Underline="True"></asp:Label>
                </div>
-           </div>      
+
+               <div class="row">
+                   <div class="col-md-6">
+                   </div>
+                   <div class="col-md-6">
+                   </div>
+               </div>
+               <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+           </asp:Panel>
        </div>
    </div>
 

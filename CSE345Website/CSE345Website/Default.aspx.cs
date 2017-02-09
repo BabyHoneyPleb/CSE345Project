@@ -11,11 +11,15 @@ namespace CSE345Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+               
+            }
         }
         protected void On_Click_Events (object sender, EventArgs e)
         {
             Response.Redirect("~/Events");
+            
         }
         protected void On_Click_Classifieds(object sender, EventArgs e)
         {
