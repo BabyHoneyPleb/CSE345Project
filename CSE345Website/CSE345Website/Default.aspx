@@ -2,8 +2,8 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-   <div class="row">
-       <div class="col-md-4">
+   <div class="row row-height">
+       <div class="col-md-4 ">
            <asp:Panel ID="pnlLeft" runat="server" CssClass="pnl-left">
                <asp:Panel ID="pnlTitle" runat="server" CssClass="pnl-title">
                    <br />
@@ -46,21 +46,21 @@
        </div>
        
        
-       <div class="col-md-4">
+       <div class="col-md-4 column-height">
            <br />
            <asp:Panel ID="pnlUpcomingEvent" runat="server" CssClass="pnl-box">
                <asp:Label ID="lblEventTitle" runat="server" Text="Upcoming Events" CssClass="title-box"></asp:Label>
                <br />
                <asp:Panel ID="pnlUp1" runat="server" CssClass="pnl-inside">
-                   <asp:Label ID="lblP1Date" runat="server" Text="Friday, February 10th, 2017 aT 8:00PM"></asp:Label>
+                   <asp:Label ID="lblP1Date" runat="server" CssClass="txt-descrip" Text="Friday, February 10th, 2017 aT 8:00PM"></asp:Label>
                </asp:Panel>
                <br />
                <asp:Panel ID="pnlUp2" runat="server" CssClass="pnl-inside">
-                   <asp:Label ID="lblP2Date" runat="server" Text="Friday, February 10th, 2017 aT 8:00PM"></asp:Label>
+                   <asp:Label ID="lblP2Date" CssClass="txt-descrip" runat="server" Text="Friday, February 10th, 2017 aT 8:00PM"></asp:Label>
                </asp:Panel>
                <br />
                <asp:Panel ID="pnlUp3" runat="server" CssClass="pnl-inside">
-                   <asp:Label ID="lblP3Date" runat="server" Text="Friday, February 10th, 2017 aT 8:00PM"></asp:Label>
+                   <asp:Label ID="lblP3Date" CssClass="txt-descrip" runat="server" Text="Friday, February 10th, 2017 aT 8:00PM"></asp:Label>
 
                </asp:Panel>
                <br />

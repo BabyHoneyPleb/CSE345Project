@@ -7,14 +7,15 @@ using System.Web.UI.WebControls;
 
 namespace CSE345Website
 {
-    public partial class SiteMaster : MasterPage
+    public partial class SignIn : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty((string)Session["UserStatus"]))
-            {
-                Session["UserStatus"] = "Sign In";
-            }
+
+        }
+        protected void SignIn_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }
