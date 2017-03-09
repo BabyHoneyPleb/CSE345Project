@@ -22,7 +22,7 @@
                </asp:Panel>
                <br />
                <br />
-               <asp:Calendar ID="cldEvents" runat="server" BackColor="transparent" BorderColor="#d1c338" BorderWidth="4px" Font-Names="Verdana" Font-Size="9pt" ForeColor="#d1c338" Height="258px" NextPrevFormat="FullMonth" Width="100%">
+               <asp:Calendar ID="cldEvents" runat="server" BackColor="transparent" BorderColor="#d1c338" BorderWidth="4px" Font-Names="Verdana" Font-Size="9pt" ForeColor="#d1c338" Height="258px" NextPrevFormat="FullMonth" Width="100%" OnSelectionChanged="cldEvents_SelectionChanged">
                    <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
                    <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#b7b7b7" VerticalAlign="Bottom" />
                    <OtherMonthDayStyle ForeColor="#b7b7b7" />
@@ -30,6 +30,9 @@
                    <TitleStyle BackColor="transparent" BorderColor="#d1c338" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#d1c338" />
                    <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
                </asp:Calendar>
+               <br />
+               <asp:Label ID="lblDateSelected" runat="server" CssClass="txt-descrip"></asp:Label>
+               <br />
                <br />
                <br />
                <div style="text-align: center;">
@@ -42,6 +45,22 @@
                </div>
                <br />
                <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
            </asp:Panel>          
        </div>
        
@@ -52,15 +71,15 @@
                <asp:Label ID="lblEventTitle" runat="server" Text="Upcoming Events" CssClass="title-box"></asp:Label>
                <br />
                <asp:Panel ID="pnlUp1" runat="server" CssClass="pnl-inside">
-                   <asp:Label ID="lblP1Date" runat="server" CssClass="txt-descrip" Text="Friday, February 10th, 2017 aT 8:00PM"></asp:Label>
+                   <asp:Label ID="lblP1Date" runat="server" CssClass="txt-descrip" Text="Friday, February 10th, 2017 at 8:00PM"></asp:Label>
                </asp:Panel>
                <br />
                <asp:Panel ID="pnlUp2" runat="server" CssClass="pnl-inside">
-                   <asp:Label ID="lblP2Date" CssClass="txt-descrip" runat="server" Text="Friday, February 10th, 2017 aT 8:00PM"></asp:Label>
+                   <asp:Label ID="lblP2Date" CssClass="txt-descrip" runat="server" Text="Friday, February 10th, 2017 at 8:00PM"></asp:Label>
                </asp:Panel>
                <br />
                <asp:Panel ID="pnlUp3" runat="server" CssClass="pnl-inside">
-                   <asp:Label ID="lblP3Date" CssClass="txt-descrip" runat="server" Text="Friday, February 10th, 2017 aT 8:00PM"></asp:Label>
+                   <asp:Label ID="lblP3Date" CssClass="txt-descrip" runat="server" Text="Friday, February 10th, 2017 at 8:00PM"></asp:Label>
 
                </asp:Panel>
                <br />
@@ -131,7 +150,39 @@
                <div>
                    <asp:Label ID="lblServiceTitle" runat="server" Text="Services" CssClass="title-default" Font-Underline="True"></asp:Label>
                </div>
-
+                <div class="row">
+                   <div class="col-md-4">
+                         <asp:Label ID="Label10" runat="server" CssClass="txt-descrip" Text="Item1"></asp:Label>
+                   </div>
+                   <div class="col-md-4">
+                        <asp:Label ID="Label11" runat="server" CssClass="txt-descrip" Text="Item2"></asp:Label>
+                   </div>
+                   <div class="col-md-4">
+                        <asp:Label ID="Label12" runat="server" CssClass="txt-descrip" Text="Item3"></asp:Label>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-4">
+                        <asp:Label ID="Label13" runat="server" CssClass="txt-descrip" Text="Item4"></asp:Label>
+                   </div>
+                   <div class="col-md-4">
+                        <asp:Label ID="Label14" runat="server" CssClass="txt-descrip" Text="Item5"></asp:Label>
+                   </div>
+                   <div class="col-md-4">
+                        <asp:Label ID="Label15" runat="server" CssClass="txt-descrip" Text="Item6"></asp:Label>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-4">
+                        <asp:Label ID="Label16" runat="server" CssClass="txt-descrip" Text="Item7"></asp:Label>
+                   </div>
+                   <div class="col-md-4">
+                        <asp:Label ID="Label17" runat="server" CssClass="txt-descrip" Text="Item8"></asp:Label>
+                   </div>
+                   <div class="col-md-4">
+                        <asp:Label ID="Label18" runat="server" CssClass="txt-descrip" Text="Item9"></asp:Label>
+                   </div>
+               </div>
                <br />
                <br />
                <br />
