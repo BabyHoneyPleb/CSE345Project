@@ -9,6 +9,8 @@
                    <br />
                    <br />
                    <asp:Label ID="lblTitle" runat="server" Text="College Corner" CssClass="txt-title"></asp:Label>
+                   <br />
+                   <asp:Button ID="btnOrganize0" runat="server" CssClass="btn btn-primary btn-lg" Height="45px" OnClick="On_Click_Events" Text="Sign In" Width="142px" />
                </asp:Panel>
                <br />
                <br />
@@ -28,7 +30,7 @@
                <br />
                <br />
                <div style="text-align: center";>
-                    <asp:Button ID="btnPostItem" runat="server" Text="Post Item/Service" CssClass="btn btn-primary btn-lg" OnClick="On_Click_Classifieds" />
+                    <asp:Button ID="btnPostItem" runat="server" Text="Post Classified" CssClass="btn btn-primary btn-lg" OnClick="On_Click_Classifieds" />
                </div>
                <br />
                <br />
@@ -41,21 +43,37 @@
            <br />
            <br />
            <asp:Panel ID="pnlUpcomingEvent" runat="server" CssClass="pnl-box">
-               <asp:Label ID="lblEventTitle" runat="server" Text="College Corner" CssClass="title-box"></asp:Label>       
+               <asp:Label ID="lblEventTitle" runat="server" Text="Upcoming Events" CssClass="title-box" Font-Underline="True"></asp:Label>       
            </asp:Panel>
            <br />
            <br />
            <asp:Panel ID="pnlFeatured" runat="server" CssClass="pnl-box">
-               <asp:Label ID="lblFeaturedTitle" runat="server" Text="College Corner" CssClass="title-box"></asp:Label>     
+               <asp:Label ID="lblFeaturedTitle" runat="server" Text="Featured Classifieds" CssClass="title-box" Font-Underline="True"></asp:Label>     
            </asp:Panel>
            <br />
            <br />
            <div class="row">
                <div class="col-md-6">
-                   <asp:Label ID="lblSaleTitle" runat="server" Text="Label" CssClass="title-default" Font-Underline="True"></asp:Label>
+                   <asp:Label ID="lblSaleTitle" runat="server" Text="Classifieds" CssClass="title-default" Font-Underline="True"></asp:Label>
+                   <br />
+                   <asp:Label ID="Label1" runat="server" Font-Underline="True" Text="Books"></asp:Label>
+&nbsp;<asp:Label ID="Label2" runat="server" Font-Underline="True" Text="Computers/Laptops"></asp:Label>
+&nbsp;<asp:Label ID="Label3" runat="server" Font-Underline="True" Text="Phones/Tablets"></asp:Label>
+                   <br />
+                   <asp:Label ID="Label4" runat="server" Font-Underline="True" Text="Services"></asp:Label>
+&nbsp;<asp:Label ID="Label5" runat="server" Font-Underline="True" Text="Roomates needed"></asp:Label>
+&nbsp;<asp:Label ID="Label6" runat="server" Font-Underline="True" Text="Help wanted"></asp:Label>
                </div>
                <div class="col-md-6">
-                   <asp:Label ID="lblServiceTitle" runat="server" Text="Label" CssClass="title-default" Font-Underline="True"></asp:Label>
+                   <asp:Label ID="lblServiceTitle" runat="server" Text="Events" CssClass="title-default" Font-Underline="True"></asp:Label>
+                   <br />
+                   <asp:Label ID="Label7" runat="server" Font-Underline="True" Text="Sports"></asp:Label>
+&nbsp;<asp:Label ID="Label8" runat="server" Font-Underline="True" Text="Seminar"></asp:Label>
+&nbsp;<asp:Label ID="Label9" runat="server" Font-Underline="True" Text="Review"></asp:Label>
+                   <br />
+                   <asp:Label ID="Label10" runat="server" Font-Underline="True" Text="Study"></asp:Label>
+&nbsp;<asp:Label ID="Label11" runat="server" Font-Underline="True" Text="Workshop"></asp:Label>
+&nbsp;<asp:Label ID="Label12" runat="server" Font-Underline="True" Text="Career fairs"></asp:Label>
                </div>
            </div>      
        </div>
