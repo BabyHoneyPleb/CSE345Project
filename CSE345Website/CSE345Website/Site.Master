@@ -11,7 +11,8 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-
+    <link rel="stylesheet" type="text/css" href="~/Content/stylesheet.css">
+    <link href='//fonts.googleapis.com/css?family=Alfa Slab One' rel='stylesheet'>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
@@ -47,13 +48,17 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                    <a class="navbar-brand" runat="server" >College Corner</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/Events">Events</a></li>
                         <li><a runat="server" href="~/Classifieds">Items/Services</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a runat="server" href="~/UserInfo"><%:(string)Session["User"] %></a></li>
+                        <li><a runat="server" href="~/SignIn"><%:(string)Session["UserStatus"] %></a></li>
                     </ul>
                 </div>
             </div>
