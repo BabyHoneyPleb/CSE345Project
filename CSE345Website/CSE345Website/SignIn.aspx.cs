@@ -16,23 +16,9 @@ namespace CSE345Website
         }
         protected void SignIn_Clicked(object sender, EventArgs e)
         {
-            try
-            {
-                SqlConnection conn = new SqlConnection();
-                conn.ConnectionString = "Data Source=localhost;Initial Catalog=afdanaj;User id=afdanaj;Password=temp12345;";
-                conn.Open();
-                SqlCommand command = new SqlCommand();
-                command.CommandText = "SELECT * FROM CSE345_Students;";
-                command.Connection = conn;
-                command.ExecuteNonQuery();
-                conn.Close();
-            }
-            catch( Exception ex)
-            {
 
-            }
 
-           // string error = "";
+            // string error = "";
             try
             {
                 if (!string.IsNullOrEmpty(txtUser.Text) || (!string.IsNullOrEmpty(txtPass.Text)))
@@ -56,11 +42,11 @@ namespace CSE345Website
                         SqlDataReader readerAccount = sqlAccount.ExecuteReader();
                         int count = 0;
                         while (readerAccount.Read())
-                        {                      
+                        {
                             count++;
                         }
                         readerAccount.Close();
-                        if(count == 1)
+                        if (count == 1)
                         {
                             Session["ID"] = id_num;
                             SqlCommand sqlStudent = new SqlCommand();
@@ -76,7 +62,8 @@ namespace CSE345Website
                                 Response.Redirect("~/Default");
                             }
                             readerStudent.Close();
-                        }else
+                        }
+                        else
                         {
 
                         }
@@ -87,16 +74,21 @@ namespace CSE345Website
                     {
 
                     }
-                }else
+                }
+                else
                 {
 
                 }
-               
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-               
+
             }
+        }
+        protected void NeedAccount_Clicked(object sender, EventArgs e)
+        {
+            Response.Redirect("~/UserInfo");
         }
     }
 }

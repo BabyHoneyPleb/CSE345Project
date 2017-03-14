@@ -14,6 +14,7 @@ namespace CSE345Website
             if (string.IsNullOrEmpty((string)Session["UserStatus"]))
             {
                 Session["UserStatus"] = "Sign In";
+                Session["User"] = "Register";
             }
         }
     }
