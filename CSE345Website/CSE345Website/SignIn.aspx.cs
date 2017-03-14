@@ -88,7 +88,7 @@ namespace CSE345Website
         }
         protected void NeedAccount_Clicked(object sender, EventArgs e)
         {
-            Response.Redirect("~/UserInfo");
+            Response.Redirect("~/Register");
         }
     }
 }
