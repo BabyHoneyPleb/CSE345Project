@@ -62,27 +62,41 @@ namespace CSE345Website
                 SqlDataReader readerAccount = sqlAccount.ExecuteReader();
                 int count = 0;
                 DateTime start;
-                DateTime end;
-                string eventDescrip;
-                string eventName;
-                string location;
-                string date;
+                //DateTime end;
                 string description;
-                Label[] lblDateHeader = { lblP1Date, lblP2Date, lblP3Date };
+               
+                Label[] lblDate = { lblP1Date, lblP2Date, lblP3Date };
                 Label[] lblDescription = { lblP1Descrip, lblP2Descrip, lblP3Descrip };
+                Label[] lblLocation = { lblP1Location, lblP2Location, lblP3Location };
+                Label[] lblTitle = { lblP1Title, lblP2Title, lblP3Title };
+
 
                 while (readerAccount.Read())
                 {
+                    Session["Event" + (count + 1).ToString()] = readerAccount.GetValue(0);
+                    lblTitle[count].Text = readerAccount.GetString(1);
+                    lblLocation[count].Text = readerAccount.GetString(2);
+                    start = readerAccount.GetDateTime(3);                    
+                    lblDate[count].Text = formatDate(start);
+                    // end = readerAccount.GetDateTime(4);
 
-                    eventName = readerAccount.GetString(1);
-                    location = readerAccount.GetString(2);
-                    start = readerAccount.GetDateTime(3);
-                    end = readerAccount.GetDateTime(4);
-                    eventDescrip = readerAccount.GetString(5);
-                    date = formatDate(start);
-                    description = formatDescription(eventName, location, eventDescrip);
-                    lblDateHeader[count].Text = date;
-                    lblDescription[count].Text = description;
+                    description = readerAccount.GetString(5);
+
+                    if (description.Length > 96)
+                    {
+                        string temp = description.Substring(0, 93);
+                        int lastSpace = temp.LastIndexOf(" ");
+                        temp = temp.Substring(0, lastSpace);
+                        temp += "...";
+                        lblDescription[count].Text = temp;
+                    }
+                    else
+                    {
+                        lblDescription[count].Text = description;
+                    }
+                   
+                   
+                
                     count++;
                     if (count == 3)
                     {
@@ -111,10 +125,7 @@ namespace CSE345Website
             return (dayOfWeek + ", " + month + " " + formatDay(newStart) +", " + year + " at " + formatTime(newStart));
 
         }
-        public string formatDescription(string newEventName, string newLocation, string newEventDescrip)
-        {
-            return (newEventName + "\n" + newLocation + "\n" + newEventDescrip);
-        }
+      
         public string formatDay(DateTime dt)
         {
             string suffix;
@@ -155,6 +166,25 @@ namespace CSE345Website
             }
             return hour + ":" + dt.ToString("mm") + suffix;
            
+        }
+
+        protected void btnP2View_Click(object sender, EventArgs e)
+        {
+            Session["EventSelected"] = Session["Event2"];
+            Response.Redirect("~/SelectedEvent?id=" + ((int)Session["Event2"]).ToString(), true);
+
+        }
+
+        protected void btP1View_Click(object sender, EventArgs e)
+        {
+            Session["EventSelected"] = Session["Event1"];
+            Response.Redirect("~/SelectedEvent?id=" + ((int)Session["Event1"]).ToString(), true);
+        }
+
+        protected void btnP3View_Click(object sender, EventArgs e)
+        {
+            Session["EventSelected"] = Session["Event3"];
+            Response.Redirect("~/SelectedEvent?id=" + ((int)Session["Event3"]).ToString(), true);
         }
     }
         

@@ -6,7 +6,7 @@
     <div class="login-page">
         <div class="login">
             <div class="login-form">
-                <asp:Label ID="lblSignIn" runat="server" Text="Sign In" CssClass="login-title"></asp:Label>
+                <asp:Label ID="lblSignIn" runat="server" Text="Register" CssClass="login-title"></asp:Label>
                 <br />
                 <br />
                 <asp:TextBox ID="txtUser" runat="server" placeholder="username"></asp:TextBox>

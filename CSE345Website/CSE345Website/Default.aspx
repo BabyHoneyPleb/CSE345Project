@@ -69,32 +69,58 @@
                <asp:Label ID="lblEventTitle" runat="server" Text="Upcoming Events" CssClass="title-box"></asp:Label>
                <br />
                <asp:Panel ID="pnlUp1" runat="server" CssClass="pnl-inside">
-                   <asp:Label ID="lblP1Date" runat="server" CssClass="txt-descrip" Text="Friday, February 10th, 2017 at 8:00PM"></asp:Label>
-                      <br />
-                   <asp:Label ID="lblP1Descrip" runat="server" CssClass="txt-descrip" Text="Description..."></asp:Label>
-                   <br />
-                   <asp:Button ID="btP1View" runat="server" CssClass="btn-descrip" Text="View More" />
+
+                   <div class="col-md-11 pnl-descrip">
+                       <asp:Label ID="lblP1Title" runat="server" CssClass="txt-descrip" Text="Title..." Font-Bold="True"></asp:Label>
+                       <br />
+                       <asp:Label ID="lblP1Location" runat="server" CssClass="txt-descrip" Text="Location"></asp:Label>
+                       <br />
+                       <asp:Label ID="lblP1Descrip" runat="server" CssClass="txt-descrip" Text="Description..."></asp:Label>
+                       <br />
+                       <asp:Label ID="lblP1Date" runat="server" CssClass="txt-descrip txt-date" Text="Friday, February 10th, 2017 at 8:00PM" Font-Italic="True"></asp:Label>    
+                   </div>
+                   <div class="col-md-1 pnl-descrip">
+                       <asp:Button ID="btP1View" runat="server" CssClass="btn-descrip" OnClick="btP1View_Click" Text="" />
+
+                   </div>
+
+
                </asp:Panel>
                <br />
                <asp:Panel ID="pnlUp2" runat="server" CssClass="pnl-inside">
-                   <asp:Label ID="lblP2Date" CssClass="txt-descrip" runat="server" Text="Friday, February 10th, 2017 at 8:00PM"></asp:Label>
-                      <br />
-                      <asp:Label ID="lblP2Descrip" runat="server" CssClass="txt-descrip" Text="Description..."></asp:Label>
-                   <br />
-                   <asp:Button ID="btnP2View" runat="server" CssClass="btn-descrip" Text="View More" />
+                   <div class="col-md-11 pnl-descrip">
+                    <asp:Label ID="lblP2Title" runat="server" CssClass="txt-descrip" Text="Title..." Font-Bold="True"></asp:Label>
+                       <br />
+                       <asp:Label ID="lblP2Location" runat="server" CssClass="txt-descrip" Text="Location"></asp:Label>
+                       <br />
+                       <asp:Label ID="lblP2Descrip" runat="server" CssClass="txt-descrip" Text="Description..."></asp:Label>
+                       <br />                     
+                        <asp:Label ID="lblP2Date" CssClass="txt-descrip" runat="server" Text="Friday, February 10th, 2017 at 8:00PM" Font-Italic="True"></asp:Label>
+                   
+                   </div>
+                   <div class="col-md-1 pnl-descrip">
+                       <asp:Button ID="btnP2View" runat="server" CssClass="btn-descrip" OnClick="btnP2View_Click" Text="" />
+                   </div>
                </asp:Panel>
                <br />
                <asp:Panel ID="pnlUp3" runat="server" CssClass="pnl-inside">
-                  
-                       <asp:Label ID="lblP3Date" CssClass="txt-descrip" runat="server" Text="Friday, February 10th, 2017 at 8:00PM"></asp:Label>
-                   <br />
+                   <div class="col-md-11 pnl-descrip">
+                       <asp:Label ID="lblP3Title" runat="server" CssClass="txt-descrip" Text="Title..." Font-Bold="True"></asp:Label>
+                       <br />
+                       <asp:Label ID="lblP3Location" runat="server" CssClass="txt-descrip" Text="Location"></asp:Label>
+                       <br />
                        <asp:Label ID="lblP3Descrip" runat="server" CssClass="txt-descrip" Text="Description..."></asp:Label>
-                   <br />
-                   <asp:Button ID="btnP3View" runat="server" CssClass="btn-descrip" Text="View More" />
-                  
+                       <br />
+                       <asp:Label ID="lblP3Date" CssClass="txt-descrip" runat="server" Text="Friday, February 10th, 2017 at 8:00PM" Font-Italic="True"></asp:Label>
+                                        
+                   </div>
+                   <div class="col-md-1 pnl-descrip">
+                       <asp:Button ID="btnP3View" runat="server" CssClass="btn-descrip" OnClick="btnP3View_Click" Text="" />
+                   </div>
+
                </asp:Panel>
                <br />
-               
+
            </asp:Panel>
            <br />
            <br />

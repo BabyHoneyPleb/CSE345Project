@@ -135,6 +135,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\arrow.png" />
+    <Content Include="Content\RightArrow.ico" />
     <Content Include="SelectedEvent.aspx" />
     <Content Include="Content\stylesheet.css" />
     <Content Include="Register.aspx" />
