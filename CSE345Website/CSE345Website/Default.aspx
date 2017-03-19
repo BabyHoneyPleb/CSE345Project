@@ -58,9 +58,7 @@
                <br />
                <br />
                <br />
-               <br />
-               <br />
-               <br />
+             
            </asp:Panel>          
        </div>
        
@@ -72,19 +70,28 @@
                <br />
                <asp:Panel ID="pnlUp1" runat="server" CssClass="pnl-inside">
                    <asp:Label ID="lblP1Date" runat="server" CssClass="txt-descrip" Text="Friday, February 10th, 2017 at 8:00PM"></asp:Label>
+                      <br />
                    <asp:Label ID="lblP1Descrip" runat="server" CssClass="txt-descrip" Text="Description..."></asp:Label>
-
+                   <br />
+                   <asp:Button ID="btP1View" runat="server" CssClass="btn-descrip" Text="View More" />
                </asp:Panel>
                <br />
                <asp:Panel ID="pnlUp2" runat="server" CssClass="pnl-inside">
                    <asp:Label ID="lblP2Date" CssClass="txt-descrip" runat="server" Text="Friday, February 10th, 2017 at 8:00PM"></asp:Label>
+                      <br />
                       <asp:Label ID="lblP2Descrip" runat="server" CssClass="txt-descrip" Text="Description..."></asp:Label>
+                   <br />
+                   <asp:Button ID="btnP2View" runat="server" CssClass="btn-descrip" Text="View More" />
                </asp:Panel>
                <br />
                <asp:Panel ID="pnlUp3" runat="server" CssClass="pnl-inside">
-                   <asp:Label ID="lblP3Date" CssClass="txt-descrip" runat="server" Text="Friday, February 10th, 2017 at 8:00PM"></asp:Label>
-                      <asp:Label ID="lblP3Descrip" runat="server" CssClass="txt-descrip" Text="Description..."></asp:Label>
-
+                  
+                       <asp:Label ID="lblP3Date" CssClass="txt-descrip" runat="server" Text="Friday, February 10th, 2017 at 8:00PM"></asp:Label>
+                   <br />
+                       <asp:Label ID="lblP3Descrip" runat="server" CssClass="txt-descrip" Text="Description..."></asp:Label>
+                   <br />
+                   <asp:Button ID="btnP3View" runat="server" CssClass="btn-descrip" Text="View More" />
+                  
                </asp:Panel>
                <br />
                

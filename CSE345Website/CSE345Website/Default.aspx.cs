@@ -47,8 +47,6 @@ namespace CSE345Website
         {
             try
             {
-
-
                 SqlConnection conn = new SqlConnection();
                 conn.ConnectionString = "Server = tcp:cit345.database.windows.net,1433;" +
                                         "Initial Catalog = CSE345;" +
