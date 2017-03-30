@@ -10,16 +10,7 @@
 namespace CSE345Website {
     
     
-    public partial class UserInfo {
-        
-        /// <summary>
-        /// registerBlock control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl registerBlock;
+    public partial class Register {
         
         /// <summary>
         /// lblSignIn control.
@@ -49,21 +40,21 @@ namespace CSE345Website {
         protected global::System.Web.UI.WebControls.TextBox txtPass;
         
         /// <summary>
-        /// btnSignIn control.
+        /// txtConfirm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSignIn;
+        protected global::System.Web.UI.WebControls.TextBox txtConfirm;
         
         /// <summary>
-        /// Label1 control.
+        /// btnRegister control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Button btnRegister;
     }
 }

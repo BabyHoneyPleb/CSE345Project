@@ -135,7 +135,11 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\arrow.png" />
+    <Content Include="Content\RightArrow.ico" />
+    <Content Include="SelectedEvent.aspx" />
     <Content Include="Content\stylesheet.css" />
+    <Content Include="Register.aspx" />
     <Content Include="SignIn.aspx" />
     <Content Include="UserInfo.aspx" />
     <Content Include="Events.aspx" />
@@ -150,6 +154,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\collegecorner - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="OaklandGoldenGrizzlies.png" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
@@ -203,6 +208,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="SelectedEvent.aspx.cs">
+      <DependentUpon>SelectedEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SelectedEvent.aspx.designer.cs">
+      <DependentUpon>SelectedEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SignIn.aspx.cs">
       <DependentUpon>SignIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

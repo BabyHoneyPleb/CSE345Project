@@ -4,18 +4,28 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
 
 namespace CSE345Website
 {
-    public partial class SiteMaster : MasterPage
+    public partial class Register : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty((string)Session["UserStatus"]))
+
+        }
+        protected void Register_Clicked(object sender, EventArgs e)
+        { 
+            // string error = "";
+            try
             {
-                Session["UserStatus"] = "Sign In";
-                Session["User"] = "";
+
+            }
+            catch (Exception ex)
+            {
+
             }
         }
     }
-}
+       
+    }

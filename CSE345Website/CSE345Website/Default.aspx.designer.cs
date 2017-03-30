@@ -112,6 +112,33 @@ namespace CSE345Website {
         protected global::System.Web.UI.WebControls.Panel pnlUp1;
         
         /// <summary>
+        /// lblP1Title control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblP1Title;
+        
+        /// <summary>
+        /// lblP1Location control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblP1Location;
+        
+        /// <summary>
+        /// lblP1Descrip control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblP1Descrip;
+        
+        /// <summary>
         /// lblP1Date control.
         /// </summary>
         /// <remarks>
@@ -119,6 +146,15 @@ namespace CSE345Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblP1Date;
+        
+        /// <summary>
+        /// btP1View control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btP1View;
         
         /// <summary>
         /// pnlUp2 control.
@@ -130,6 +166,33 @@ namespace CSE345Website {
         protected global::System.Web.UI.WebControls.Panel pnlUp2;
         
         /// <summary>
+        /// lblP2Title control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblP2Title;
+        
+        /// <summary>
+        /// lblP2Location control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblP2Location;
+        
+        /// <summary>
+        /// lblP2Descrip control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblP2Descrip;
+        
+        /// <summary>
         /// lblP2Date control.
         /// </summary>
         /// <remarks>
@@ -137,6 +200,15 @@ namespace CSE345Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblP2Date;
+        
+        /// <summary>
+        /// btnP2View control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnP2View;
         
         /// <summary>
         /// pnlUp3 control.
@@ -148,6 +220,33 @@ namespace CSE345Website {
         protected global::System.Web.UI.WebControls.Panel pnlUp3;
         
         /// <summary>
+        /// lblP3Title control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblP3Title;
+        
+        /// <summary>
+        /// lblP3Location control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblP3Location;
+        
+        /// <summary>
+        /// lblP3Descrip control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblP3Descrip;
+        
+        /// <summary>
         /// lblP3Date control.
         /// </summary>
         /// <remarks>
@@ -155,6 +254,15 @@ namespace CSE345Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblP3Date;
+        
+        /// <summary>
+        /// btnP3View control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnP3View;
         
         /// <summary>
         /// pnlFeatured control.

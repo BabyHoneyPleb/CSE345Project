@@ -11,7 +11,22 @@ namespace CSE345Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                if (((string)Session["User"]).Equals("Register"))
+                {
+                    registerBlock.Visible = true;
+                }
+                else
+                {
+                    registerBlock.Visible = false;
+                }
+            }
+        }
+        protected void Register_Clicked(object sender, EventArgs e)
+        {
 
         }
+
     }
 }
