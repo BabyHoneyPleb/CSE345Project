@@ -56,8 +56,8 @@ namespace CSE345Website
                                         "MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;";
                 conn.Open();
                 SqlCommand sqlAccount = new SqlCommand();
-                sqlAccount.CommandText = "SELECT * FROM Event ORDER BY EVENT_START_TIME;";
-
+                sqlAccount.CommandText = "SELECT * FROM Event WHERE EVENT_START_TIME >= @value1 ORDER BY EVENT_START_TIME;";
+                sqlAccount.Parameters.AddWithValue("@value1", DateTime.Now);
                 sqlAccount.Connection = conn;
                 SqlDataReader readerAccount = sqlAccount.ExecuteReader();
                 int count = 0;
@@ -153,7 +153,14 @@ namespace CSE345Website
             string hour;
             if(dt.Hour >= 12)
             {
-                hour = (dt.Hour - 12).ToString();
+                if (dt.Hour > 12)
+                {
+                    hour = (dt.Hour - 12).ToString();
+                }
+                else
+                {
+                    hour = dt.Hour.ToString();
+                }
                 suffix = "PM";
             }else
             {
@@ -171,20 +178,20 @@ namespace CSE345Website
         protected void btnP2View_Click(object sender, EventArgs e)
         {
             Session["EventSelected"] = Session["Event2"];
-            Response.Redirect("~/SelectedEvent?id=" + ((int)Session["Event2"]).ToString(), true);
+            Response.Redirect("~/SelectedEvent?Id=" + ((int)Session["Event2"]).ToString(), true);
 
         }
 
         protected void btP1View_Click(object sender, EventArgs e)
         {
             Session["EventSelected"] = Session["Event1"];
-            Response.Redirect("~/SelectedEvent?id=" + ((int)Session["Event1"]).ToString(), true);
+            Response.Redirect("~/SelectedEvent?Id=" + ((int)Session["Event1"]).ToString(), true);
         }
 
         protected void btnP3View_Click(object sender, EventArgs e)
         {
             Session["EventSelected"] = Session["Event3"];
-            Response.Redirect("~/SelectedEvent?id=" + ((int)Session["Event3"]).ToString(), true);
+            Response.Redirect("~/SelectedEvent?Id=" + ((int)Session["Event3"]).ToString(), true);
         }
     }
         

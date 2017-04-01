@@ -59,7 +59,7 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a runat="server" href="~/UserInfo"><%:(string)Session["User"] %></a></li>
-                        <li><a runat="server" href="~/SignIn"><%:(string)Session["UserStatus"] %></a></li>
+                        <li><a runat="server" onclick="didClick" href="~/SignIn"><%:(string)Session["UserStatus"] %></a></li>
                     </ul>
                 </div>
             </div>

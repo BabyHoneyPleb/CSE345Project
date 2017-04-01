@@ -24,6 +24,7 @@ namespace CSE345Website
                     txtPass.Visible = false;
                     txtUser.Visible = false;
                     lblSignIn.Visible = false;
+                    lnkButton.Visible = false;
                     btnSignIn.Text = "Sign Out";
                 }
             }

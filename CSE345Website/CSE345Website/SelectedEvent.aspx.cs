@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Date = System.DateTime;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace CSE345Website
 {
@@ -15,39 +16,56 @@ namespace CSE345Website
         {
             if (!IsPostBack)
             {
-                try
-                {
-                    SqlConnection conn = new SqlConnection();
-                    conn.ConnectionString = "Server = tcp:cit345.database.windows.net,1433;" +
-                                            "Initial Catalog = CSE345;" +
-                                            "Persist Security Info = False;" +
-                                            "User ID = afdanaj;" +
-                                            "Password = Temp12345;" +
-                                            "MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;";
-                    conn.Open();
-                    SqlCommand sqlAccount = new SqlCommand();
-                    sqlAccount.CommandText = "SELECT * FROM Event WHERE EVENT_ID=@value1;";
-                    sqlAccount.Parameters.AddWithValue("@value1", (int)Session["EventSelected"]);
-                    sqlAccount.Connection = conn;
-                    SqlDataReader readerAccount = sqlAccount.ExecuteReader();
-                    while (readerAccount.Read())
-                    {
-                        Title = readerAccount.GetString(1);
-                        Response.AppendHeader("Event", Title);
-                        lblTitle.Text = readerAccount.GetString(1);
-                        lblLocation.Text = readerAccount.GetString(2);
-                        DateTime start = readerAccount.GetDateTime(3);
-                        lblDate.Text = formatDate(start);
-                        lblDescription.Text = readerAccount.GetString(5);
-                       
-                    }
-                }
-                catch (Exception ex)
-                {
 
+
+                if (Request.QueryString.Get("Id") != null)
+                {
+                    DetailsView1.DefaultMode = DetailsViewMode.ReadOnly;
+                    detail();
                 }
+             
             }
         }
+        void detail()
+        {
+            SqlConnection conn = new SqlConnection();
+            try
+            {
+              
+                conn.ConnectionString = "Server = tcp:cit345.database.windows.net,1433;" +
+                                        "Initial Catalog = CSE345;" +
+                                        "Persist Security Info = False;" +
+                                        "User ID = afdanaj;" +
+                                        "Password = Temp12345;" +
+                                        "MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;";
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Event WHERE EVENT_ID=@id", conn);
+                cmd.Parameters.AddWithValue("@id", Request.QueryString["Id"]);
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adp.Fill(ds);
+                ds.Tables[0].Columns.Add("FormDate", typeof(string));
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+                    DateTime date = (DateTime)ds.Tables[0].Rows[i]["EVENT_START_TIME"];
+                
+                    ds.Tables[0].Rows[i]["FormDate"] = formatDate(date);
+                }
+                DetailsView1.DataSource = ds;
+                DetailsView1.DataBind();
+                cmd.Dispose();
+            }
+            catch (Exception k)
+            {
+                Response.Write(k.Message);
+                //throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         public string formatDate(DateTime newStart)
         {
             string dayOfWeek = newStart.DayOfWeek.ToString();
@@ -91,7 +109,14 @@ namespace CSE345Website
             string hour;
             if (dt.Hour >= 12)
             {
-                hour = (dt.Hour - 12).ToString();
+                if (dt.Hour > 12)
+                {
+                    hour = (dt.Hour - 12).ToString();
+                }
+                else
+                {
+                    hour = dt.Hour.ToString();
+                }
                 suffix = "PM";
             }
             else
