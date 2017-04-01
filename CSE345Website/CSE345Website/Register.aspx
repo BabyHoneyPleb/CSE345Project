@@ -9,6 +9,9 @@
                 <asp:Label ID="lblSignIn" runat="server" Text="Register" CssClass="login-title"></asp:Label>
                 <br />
                 <br />
+                <asp:TextBox ID="txtFName" runat="server" placeholder="First Name"></asp:TextBox>
+                <asp:TextBox ID="txtLName" runat="server" placeholder="Last Name"></asp:TextBox>
+                <asp:TextBox ID="txtPhoneNumber" runat="server" placeholder="Phone Number"></asp:TextBox>
                 <asp:TextBox ID="txtUser" runat="server" placeholder="username"></asp:TextBox>
                 <asp:TextBox ID="txtPass" runat="server" placeholder="password" TextMode="Password"></asp:TextBox>
                 <asp:TextBox ID="txtConfirm" runat="server" placeholder="confirm password" TextMode="Password"></asp:TextBox> 

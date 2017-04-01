@@ -79,7 +79,7 @@
                        <br />
                        <asp:Label ID="lblP1Date" runat="server" CssClass="txt-descrip txt-date" Text="Friday, February 10th, 2017 at 8:00PM" Font-Italic="True"></asp:Label>    
                    </div>
-                   <div class="col-md-1 pnl-descrip">
+                   <div class="col-sm-1 pnl-descrip">
                        <asp:Button ID="btP1View" runat="server" CssClass="btn-descrip" OnClick="btP1View_Click" Text="" />
 
                    </div>
@@ -88,7 +88,7 @@
                </asp:Panel>
                <br />
                <asp:Panel ID="pnlUp2" runat="server" CssClass="pnl-inside">
-                   <div class="col-md-11 pnl-descrip">
+                   <div class="col-sm-11 pnl-descrip">
                     <asp:Label ID="lblP2Title" runat="server" CssClass="txt-descrip" Text="Title..." Font-Bold="True"></asp:Label>
                        <br />
                        <asp:Label ID="lblP2Location" runat="server" CssClass="txt-descrip" Text="Location"></asp:Label>
@@ -98,13 +98,13 @@
                         <asp:Label ID="lblP2Date" CssClass="txt-descrip" runat="server" Text="Friday, February 10th, 2017 at 8:00PM" Font-Italic="True"></asp:Label>
                    
                    </div>
-                   <div class="col-md-1 pnl-descrip">
+                   <div class="col-sm-1 pnl-descrip">
                        <asp:Button ID="btnP2View" runat="server" CssClass="btn-descrip" OnClick="btnP2View_Click" Text="" />
                    </div>
                </asp:Panel>
                <br />
                <asp:Panel ID="pnlUp3" runat="server" CssClass="pnl-inside">
-                   <div class="col-md-11 pnl-descrip">
+                   <div class="col-sm-11 pnl-descrip">
                        <asp:Label ID="lblP3Title" runat="server" CssClass="txt-descrip" Text="Title..." Font-Bold="True"></asp:Label>
                        <br />
                        <asp:Label ID="lblP3Location" runat="server" CssClass="txt-descrip" Text="Location"></asp:Label>
@@ -114,7 +114,7 @@
                        <asp:Label ID="lblP3Date" CssClass="txt-descrip" runat="server" Text="Friday, February 10th, 2017 at 8:00PM" Font-Italic="True"></asp:Label>
                                         
                    </div>
-                   <div class="col-md-1 pnl-descrip">
+                   <div class="col-sm-1 pnl-descrip">
                        <asp:Button ID="btnP3View" runat="server" CssClass="btn-descrip" OnClick="btnP3View_Click" Text="" />
                    </div>
 

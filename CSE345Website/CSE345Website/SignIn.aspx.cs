@@ -38,7 +38,7 @@ namespace CSE345Website
                 {
                     if (!string.IsNullOrEmpty(txtUser.Text) || (!string.IsNullOrEmpty(txtPass.Text)))
                     {
-                        if (txtUser.Text.StartsWith("G"))
+                        if (txtUser.Text.StartsWith("G") && txtUser.Text.Length == 9)
                         {
                             int id_num = int.Parse(txtUser.Text.Replace("G", ""));
                             SqlConnection conn = new SqlConnection();
