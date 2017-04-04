@@ -50,6 +50,7 @@
                         <asp:TextBox ID="txtEventDescript" runat="server" placeholder="Description"></asp:TextBox>
                         <br />
                         <br />
+
                         <asp:Calendar ID="cldEvents" AutoPostBack="false" OnSelectionChanged="didSelectNewDate" runat="server" BackColor="transparent" BorderColor="#d1c338" BorderWidth="4px" Font-Names="Verdana" Font-Size="9pt" ForeColor="#d1c338" Height="258px" NextPrevFormat="FullMonth" Width="100%">
                             <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
                             <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#b7b7b7" VerticalAlign="Bottom" />
@@ -60,7 +61,11 @@
                         </asp:Calendar>
                         <asp:TextBox ID="txtSelectedDate" runat="server" placeholder="Date"></asp:TextBox>
                          <asp:TextBox ID="txtTime" runat="server" placeholder="Start Time"></asp:TextBox>
-                         <asp:CheckBox ID="chkEnroll" runat="server" Text="Enroll Required"/>
+                      
+                     
+                          <asp:CheckBox ID="chkEnroll" Text="Enroll Required" runat="server" CssClass="chk-enroll"  />
+                                
+                     
                          <asp:Button ID="btnSubmit" runat="server" OnClick="Submit_Clicked" Text="Submit" />
                     </div>
                 </div>
