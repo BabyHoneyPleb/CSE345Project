@@ -6,11 +6,14 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Date = System.DateTime;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace CSE345Website
 {
     public partial class _Default : Page
     {
+        DateTimeFormatInfo info = new DateTimeFormatInfo();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -84,7 +87,7 @@ namespace CSE345Website
 
                     if (description.Length > 96)
                     {
-                        string temp = description.Substring(0, 93);
+                        string temp = description.Substring(0, 90);
                         int lastSpace = temp.LastIndexOf(" ");
                         temp = temp.Substring(0, lastSpace);
                         temp += "...";
@@ -94,7 +97,7 @@ namespace CSE345Website
                     {
                         lblDescription[count].Text = description;
                     }
-                   
+             
                    
                 
                     count++;
@@ -116,13 +119,16 @@ namespace CSE345Website
         }
         public string formatDate(DateTime newStart)
         {
+
+           
+         
             string dayOfWeek = newStart.DayOfWeek.ToString();
-            string month = newStart.ToString("MMMM");
+            string month = info.GetAbbreviatedMonthName(newStart.Month);
             string year = newStart.ToString("yyyy");
             string day = newStart.Day.ToString("d");
 
 
-            return (dayOfWeek + ", " + month + " " + formatDay(newStart) +", " + year + " at " + formatTime(newStart));
+            return (dayOfWeek + ", " + month + ". " + formatDay(newStart) +", " + year + " at " + formatTime(newStart));
 
         }
       

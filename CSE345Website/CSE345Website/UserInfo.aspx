@@ -2,25 +2,20 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
    
-    <div class="login-page" runat="server" id="registerBlock">
-        <div class="login">
-            <div class="login-form">
-                <asp:Label ID="lblSignIn" runat="server" Text="Sign In" CssClass="login-title"></asp:Label>
-                <br />
-                <br />
-                <asp:TextBox ID="txtUser" runat="server" placeholder="username"></asp:TextBox>
-                <asp:TextBox ID="txtPass" runat="server" placeholder="password" TextMode="Password"></asp:TextBox>
-                <asp:Button ID="btnSignIn" runat="server" OnClick="Register_Clicked" Text="Sign In" />
-                <br />
-                <asp:Label ID="Label1" runat="server" href="~/UserInfo" Text="Need an account, click here!" CssClass="login-title"></asp:Label>
-
-            </div>
-        </div>
-    </div>
-    <div >
-
-    </div>
+    <asp:TextBox ID="gID" runat="server"></asp:TextBox>
+    <asp:TextBox ID="fName" runat="server"></asp:TextBox>
+    <asp:TextBox ID="lName" runat="server"></asp:TextBox>
+    <asp:TextBox ID="areaCode" runat="server"></asp:TextBox>
+    <asp:TextBox ID="phone" runat="server"></asp:TextBox>
+    <asp:TextBox ID="email" runat="server"></asp:TextBox>
 
 
+    <asp:TextBox ID="street" runat="server"></asp:TextBox>
+    <asp:TextBox ID="city" runat="server"></asp:TextBox>
+    <asp:TextBox ID="state" runat="server"></asp:TextBox>
+    <asp:TextBox ID="zipcode" runat="server"></asp:TextBox>
+    <asp:TextBox ID="standing" runat="server"></asp:TextBox>
+    <asp:TextBox ID="major" runat="server"></asp:TextBox>
+   
 
 </asp:Content>

@@ -74,6 +74,7 @@ namespace CSE345Website
                                 {
                                     string fName = readerStudent.GetString(1);
                                     string lName = readerStudent.GetString(2);
+                                    
                                     Session["User"] = fName + " " + lName;
                                     Session["UserStatus"] = "Sign Out";
                                     Response.Redirect("~/Default");
