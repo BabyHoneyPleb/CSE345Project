@@ -11,7 +11,20 @@ namespace CSE345Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrEmpty((string)Session["UserStatus"]))
+            {
+                Session["UserStatus"] = "Sign In";
+                Session["User"] = "";
+            }
+        }
+        protected void didClick(object sender, EventArgs e)
+        {
+            if (((string)Session["UserStatus"]).Equals("Sign Out"))
+            {
+                Session["User"] = "";
+                Session["UserStatus"] = "Sign In";
+                Response.Redirect("~/Default");
+            }
         }
     }
 }
