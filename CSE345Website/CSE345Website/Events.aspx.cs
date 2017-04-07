@@ -58,7 +58,7 @@ namespace CSE345Website
             }
             catch (Exception k)
             {
-                Response.Write(k.Message);
+               // Response.Write(k.Message);
                 //throw;
             }
             finally
@@ -149,28 +149,46 @@ namespace CSE345Website
                                         "Password = Temp12345;" +
                                         "MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;";
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO Event (EVENT_NAME, EVENT_LOCATION, EVENT_START_TIME, EVENT_DESCRIPT, EVENT_ENROLL_REQUIRED)" +
-                                                "VALUES (@name, @loc, @stime, @desc, @enroll);", conn);
-                cmd.Parameters.AddWithValue("@name", txtEventName.Text);
-                cmd.Parameters.AddWithValue("@loc", txtEventLoc.Text);
+                SqlCommand cmd_event = new SqlCommand("INSERT INTO Event (EVENT_NAME, EVENT_LOCATION, EVENT_START_TIME, EVENT_DESCRIPT, EVENT_ENROLL_REQUIRED)" +
+                                                "VALUES (@name, @loc, @stime, @desc, @enroll)", conn);
+               
+                cmd_event.Parameters.AddWithValue("@name", txtEventName.Text);
+                cmd_event.Parameters.AddWithValue("@loc", txtEventLoc.Text);
                 DateTime date = DateTime.Parse(txtSelectedDate.Text + " " + txtTime.Text);
-                cmd.Parameters.AddWithValue("@stime", date);
-                cmd.Parameters.AddWithValue("@desc", txtEventDescript.Text);
+                cmd_event.Parameters.AddWithValue("@stime", date);
+                cmd_event.Parameters.AddWithValue("@desc", txtEventDescript.Text);
                 int checkState = 0;
                 if (chkEnroll.Checked)
                 {
                     checkState = 1;
                 }
-                cmd.Parameters.AddWithValue("@enroll", checkState);
+                cmd_event.Parameters.AddWithValue("@enroll", checkState);
 
-                cmd.ExecuteNonQuery();
+               
+                cmd_event.ExecuteNonQuery();
 
-             
-                cmd.Dispose();
+
+                SqlCommand cmd_participant = new SqlCommand("INSERT INTO Participant (PART_STUD_ID, PART_EVENT_ID, PART_DATE_REG, PART_IS_ORGANIZER)" +
+                                                "VALUES (@studID, (SELECT EVENT_ID FROM Event WHERE EVENT_NAME=@name AND EVENT_DESCRIPT=@desc) , @dateReg, @isOrganizer);", conn);
+                cmd_participant.Parameters.AddWithValue("@studID", (int)Session["ID"]);
+                cmd_participant.Parameters.AddWithValue("@name", txtEventName.Text);
+                cmd_participant.Parameters.AddWithValue("@desc", txtEventDescript.Text);
+                cmd_participant.Parameters.AddWithValue("@dateReg", DateTime.Now);
+                cmd_participant.Parameters.AddWithValue("@isOrganizer", 1);
+
+                cmd_participant.ExecuteNonQuery();
+
+
+
+
+                cmd_event.Dispose();
+                cmd_participant.Dispose();
+
+                Response.Redirect("~/Events");
             }
             catch (Exception k)
             {
-                Response.Write(k.Message);
+               // Response.Write(k.Message);
                 //throw;
             }
             finally

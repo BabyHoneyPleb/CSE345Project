@@ -26,6 +26,72 @@ namespace CSE345Website
              
             }
         }
+        protected void enrollClicked(object sender, EventArgs e)
+        {
+            if(btnDelete.Visible == false)
+            {
+                SqlConnection conn = new SqlConnection();
+                try
+                {
+                    conn.ConnectionString = "Server = tcp:cit345.database.windows.net,1433;" +
+                                            "Initial Catalog = CSE345;" +
+                                            "Persist Security Info = False;" +
+                                            "User ID = afdanaj;" +
+                                            "Password = Temp12345;" +
+                                            "MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;";
+                    conn.Open();
+                    SqlCommand cmd2 = new SqlCommand("INSERT INTO Participant (PART_STUD_ID, PART_EVENT_ID, PART_DATE_REG, PART_IS_ORGANIZER) " +
+                                                    "VALUES (@studID, @eventID, @date, @organizer);", conn);
+                    cmd2.Parameters.AddWithValue("@studID", (int)Session["ID"]);
+                    cmd2.Parameters.AddWithValue("@eventID", Request.QueryString["Id"]);
+                    cmd2.Parameters.AddWithValue("@date", DateTime.Now);
+                    cmd2.Parameters.AddWithValue("@organizer", 0);
+                    cmd2.ExecuteNonQuery();
+              
+                }
+                catch (Exception k)
+                {
+                    // Response.Write(k.Message);
+                    //throw;
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        
+        }
+        protected void deleteEvent(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection();
+            try
+            {
+                conn.ConnectionString = "Server = tcp:cit345.database.windows.net,1433;" +
+                                        "Initial Catalog = CSE345;" +
+                                        "Persist Security Info = False;" +
+                                        "User ID = afdanaj;" +
+                                        "Password = Temp12345;" +
+                                        "MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;";
+                conn.Open();
+                SqlCommand cmd2 = new SqlCommand("DELETE FROM Participant WHERE PART_EVENT_ID=@eventID;", conn);
+                cmd2.Parameters.AddWithValue("@eventID", Request.QueryString["Id"]);
+                cmd2.ExecuteNonQuery();
+                SqlCommand cmd1 = new SqlCommand("DELETE FROM Event WHERE EVENT_ID=@eventID;", conn);
+                cmd1.Parameters.AddWithValue("@eventID", Request.QueryString["Id"]);
+                cmd1.ExecuteNonQuery();
+                Response.Redirect("~/Events");
+             
+            }
+            catch (Exception k)
+            {
+               // Response.Write(k.Message);
+                //throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
         void detail()
         {
             SqlConnection conn = new SqlConnection();
@@ -48,16 +114,30 @@ namespace CSE345Website
                 for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                 {
                     DateTime date = (DateTime)ds.Tables[0].Rows[i]["EVENT_START_TIME"];
-                
+                    if((int)ds.Tables[0].Rows[i]["EVENT_ENROLL_REQUIRED"] == 1 && !string.IsNullOrEmpty((string)Session["User"]))
+                    {
+                        btnEnroll.Visible = true;
+                    }
                     ds.Tables[0].Rows[i]["FormDate"] = formatDate(date);
                 }
                 DetailsView1.DataSource = ds;
                 DetailsView1.DataBind();
                 cmd.Dispose();
+                SqlCommand cmd2 = new SqlCommand("SELECT * FROM Participant WHERE PART_STUD_ID=@studID AND PART_EVENT_ID=@eventID AND PART_IS_ORGANIZER=@organ", conn);
+                cmd2.Parameters.AddWithValue("@studID", (int)Session["ID"]);
+                cmd2.Parameters.AddWithValue("@eventID", Request.QueryString["Id"]);
+                cmd2.Parameters.AddWithValue("@organ", 1);
+                SqlDataReader reader = cmd2.ExecuteReader();
+                while (reader.Read())
+                {
+                    btnDelete.Visible = true;
+                }
+                reader.Close();
+                cmd2.Dispose();
             }
             catch (Exception k)
             {
-                Response.Write(k.Message);
+              //  Response.Write(k.Message);
                 //throw;
             }
             finally

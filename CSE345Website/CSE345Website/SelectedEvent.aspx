@@ -28,6 +28,8 @@
                 </asp:TemplateField>
             </Fields>
         </asp:DetailsView>
+        <asp:Button ID="btnEnroll" runat="server" Text="Enroll" OnClick="enrollClicked" Visible="false" />
+        <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="deleteEvent" Visible="false" />
     </div>
    
 

@@ -2,19 +2,24 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-   <div class="row">
-       <div class="col-md-3-4">
+   <div class="row row-height">
+       <div class="col-md-4 ">
            <asp:Panel ID="pnlLeft" runat="server" CssClass="pnl-left">
                <asp:Panel ID="pnlTitle" runat="server" CssClass="pnl-title">
                    <br />
                    <br />
-                   <asp:Label ID="lblTitle" runat="server" Text="College Corner" CssClass="txt-title"></asp:Label>
-                   <br />
-                   <asp:Button ID="btnOrganize0" runat="server" CssClass="btn btn-primary btn-lg" Height="45px" OnClick="On_Click_Events" Text="Sign In" Width="142px" />
+                   <div class="row">
+                       <div class="col-md-4" style="text-align: center;">
+                            <asp:Image ID="Image1" runat="server" Height="96px" ImageUrl="~/OaklandGoldenGrizzlies.png" Width="83px" />
+                       </div>
+                       <div class="col-md-8">
+                           <asp:Label ID="lblTitle" runat="server" Text="College<br/>&nbsp;&nbsp;&nbsp;Corner" CssClass="txt-title"></asp:Label>
+                       </div>
+                   </div>
                </asp:Panel>
                <br />
                <br />
-               <asp:Calendar ID="cldEvents" runat="server" BackColor="transparent" BorderColor="#d1c338" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="#d1c338" Height="258px" NextPrevFormat="FullMonth" Width="100%">
+               <asp:Calendar ID="cldEvents" runat="server" BackColor="transparent" BorderColor="#d1c338" BorderWidth="4px" Font-Names="Verdana" Font-Size="9pt" ForeColor="#d1c338" Height="258px" NextPrevFormat="FullMonth" Width="100%" OnSelectionChanged="cldEvents_SelectionChanged">
                    <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
                    <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#b7b7b7" VerticalAlign="Bottom" />
                    <OtherMonthDayStyle ForeColor="#b7b7b7" />
@@ -23,6 +28,9 @@
                    <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
                </asp:Calendar>
                <br />
+               <asp:Label ID="lblDateSelected" runat="server" CssClass="txt-descrip"></asp:Label>
+               <br />
+               <br />
                <br />
                <div style="text-align: center;">
                    <asp:Button ID="btnOrganize" runat="server" Text="Organize Event" CssClass="btn btn-primary btn-lg" OnClick="On_Click_Events"/>
@@ -30,52 +38,157 @@
                <br />
                <br />
                <div style="text-align: center";>
-                    <asp:Button ID="btnPostItem" runat="server" Text="Post Classified" CssClass="btn btn-primary btn-lg" OnClick="On_Click_Classifieds" />
+                    <asp:Button ID="btnPostItem" runat="server" Text="Post Item/Service" CssClass="btn btn-primary btn-lg" OnClick="On_Click_Classifieds" />
                </div>
                <br />
                <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+             
            </asp:Panel>          
        </div>
        
        
-       
-       <div class="col-md-8">
-           <br />
+       <div class="col-md-4 column-height">
            <br />
            <asp:Panel ID="pnlUpcomingEvent" runat="server" CssClass="pnl-box">
-               <asp:Label ID="lblEventTitle" runat="server" Text="Upcoming Events" CssClass="title-box" Font-Underline="True"></asp:Label>       
+               <asp:Label ID="lblEventTitle" runat="server" Text="Upcoming Events" CssClass="title-box"></asp:Label>
+               <br />
+               <asp:Panel ID="pnlUp1" runat="server" CssClass="pnl-inside">
+
+                   <div class="col-md-11 pnl-descrip">
+                       <asp:Label ID="lblP1Title" runat="server" CssClass="txt-descrip" Text="Title..." Font-Bold="True"></asp:Label>
+                       <br />
+                       <asp:Label ID="lblP1Location" runat="server" CssClass="txt-descrip" Text="Location"></asp:Label>
+                       <br />
+                       <asp:Label ID="lblP1Descrip" runat="server" CssClass="txt-descrip" Text="Description..."></asp:Label>
+                       <br />
+                       <asp:Label ID="lblP1Date" runat="server" CssClass="txt-descrip txt-date" Text="Friday, February 10th, 2017 at 8:00PM" Font-Italic="True"></asp:Label>    
+                   </div>
+                   <div class="col-sm-1 pnl-descrip">
+                       <asp:Button ID="btP1View" runat="server" CssClass="btn-descrip" OnClick="btP1View_Click" Text="" />
+
+                   </div>
+
+
+               </asp:Panel>
+               <br />
+               <asp:Panel ID="pnlUp2" runat="server" CssClass="pnl-inside">
+                   <div class="col-sm-11 pnl-descrip">
+                    <asp:Label ID="lblP2Title" runat="server" CssClass="txt-descrip" Text="Title..." Font-Bold="True"></asp:Label>
+                       <br />
+                       <asp:Label ID="lblP2Location" runat="server" CssClass="txt-descrip" Text="Location"></asp:Label>
+                       <br />
+                       <asp:Label ID="lblP2Descrip" runat="server" CssClass="txt-descrip" Text="Description..."></asp:Label>
+                       <br />                     
+                        <asp:Label ID="lblP2Date" CssClass="txt-descrip" runat="server" Text="Friday, February 10th, 2017 at 8:00PM" Font-Italic="True"></asp:Label>
+                   
+                   </div>
+                   <div class="col-sm-1 pnl-descrip">
+                       <asp:Button ID="btnP2View" runat="server" CssClass="btn-descrip" OnClick="btnP2View_Click" Text="" />
+                   </div>
+               </asp:Panel>
+               <br />
+               <asp:Panel ID="pnlUp3" runat="server" CssClass="pnl-inside">
+                   <div class="col-sm-11 pnl-descrip">
+                       <asp:Label ID="lblP3Title" runat="server" CssClass="txt-descrip" Text="Title..." Font-Bold="True"></asp:Label>
+                       <br />
+                       <asp:Label ID="lblP3Location" runat="server" CssClass="txt-descrip" Text="Location"></asp:Label>
+                       <br />
+                       <asp:Label ID="lblP3Descrip" runat="server" CssClass="txt-descrip" Text="Description..."></asp:Label>
+                       <br />
+                       <asp:Label ID="lblP3Date" CssClass="txt-descrip" runat="server" Text="Friday, February 10th, 2017 at 8:00PM" Font-Italic="True"></asp:Label>
+                                        
+                   </div>
+                   <div class="col-sm-1 pnl-descrip">
+                       <asp:Button ID="btnP3View" runat="server" CssClass="btn-descrip" OnClick="btnP3View_Click" Text="" />
+                   </div>
+
+               </asp:Panel>
+               <br />
+
            </asp:Panel>
            <br />
            <br />
            <asp:Panel ID="pnlFeatured" runat="server" CssClass="pnl-box">
-               <asp:Label ID="lblFeaturedTitle" runat="server" Text="Featured Classifieds" CssClass="title-box" Font-Underline="True"></asp:Label>     
+               <asp:Label ID="lblFeaturedTitle" runat="server" Text="Featured" CssClass="title-box"></asp:Label>
+               <br />
+               <asp:Panel ID="pnlFeat1" runat="server" CssClass="pnl-inside">
+               </asp:Panel>
+               <br />
+               <asp:Panel ID="pnlFeat2" runat="server" CssClass="pnl-inside">
+               </asp:Panel>
+               <br />
+               <asp:Panel ID="pnlFeat3" runat="server" CssClass="pnl-inside">
+               </asp:Panel>
+               <br />
            </asp:Panel>
            <br />
            <br />
-           <div class="row">
-               <div class="col-md-6">
-                   <asp:Label ID="lblSaleTitle" runat="server" Text="Classifieds" CssClass="title-default" Font-Underline="True"></asp:Label>
-                   <br />
-                   <asp:Label ID="Label1" runat="server" Font-Underline="True" Text="Books"></asp:Label>
-&nbsp;<asp:Label ID="Label2" runat="server" Font-Underline="True" Text="Computers/Laptops"></asp:Label>
-&nbsp;<asp:Label ID="Label3" runat="server" Font-Underline="True" Text="Phones/Tablets"></asp:Label>
-                   <br />
-                   <asp:Label ID="Label4" runat="server" Font-Underline="True" Text="Services"></asp:Label>
-&nbsp;<asp:Label ID="Label5" runat="server" Font-Underline="True" Text="Roomates needed"></asp:Label>
-&nbsp;<asp:Label ID="Label6" runat="server" Font-Underline="True" Text="Help wanted"></asp:Label>
-               </div>
-               <div class="col-md-6">
-                   <asp:Label ID="lblServiceTitle" runat="server" Text="Events" CssClass="title-default" Font-Underline="True"></asp:Label>
-                   <br />
-                   <asp:Label ID="Label7" runat="server" Font-Underline="True" Text="Sports"></asp:Label>
-&nbsp;<asp:Label ID="Label8" runat="server" Font-Underline="True" Text="Seminar"></asp:Label>
-&nbsp;<asp:Label ID="Label9" runat="server" Font-Underline="True" Text="Review"></asp:Label>
-                   <br />
-                   <asp:Label ID="Label10" runat="server" Font-Underline="True" Text="Study"></asp:Label>
-&nbsp;<asp:Label ID="Label11" runat="server" Font-Underline="True" Text="Workshop"></asp:Label>
-&nbsp;<asp:Label ID="Label12" runat="server" Font-Underline="True" Text="Career fairs"></asp:Label>
-               </div>
-           </div>      
+       </div> 
+       <div class="col-md-4">
+           <asp:Panel ID="pnlRight" runat="server" CssClass="pnl-left">
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />    
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+              <br />
+           </asp:Panel>
        </div>
    </div>
 
