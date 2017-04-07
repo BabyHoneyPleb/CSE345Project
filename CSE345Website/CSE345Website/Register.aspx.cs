@@ -49,14 +49,21 @@ namespace CSE345Website
                                     conn.Open();
 
                                     SqlCommand sqlStudent = new SqlCommand();
-                                    sqlStudent.CommandText = "INSERT INTO Student (STUD_ID, STUD_FNAME, STUD_LNAME, STUD_AREA_CODE, STUD_PHONE, STUD_EMAIL) " +
-                                                              "VALUES (@id, @fname, @lname, @area, @phone, @email);";
+                                    sqlStudent.CommandText = "INSERT INTO Student (STUD_ID, STUD_FNAME, STUD_LNAME, STUD_AREA_CODE, STUD_PHONE, STUD_EMAIL, STUD_STREET, STUD_CITY, STUD_STATE, STUD_ZIPCODE, STUD_STANDING, STUD_MAJOR) " +
+                                                              "VALUES (@id, @fname, @lname, @area, @phone, @email, @street, @city, @state, @zip, @standing, @major);";
                                     sqlStudent.Parameters.AddWithValue("@id", id_num);
                                     sqlStudent.Parameters.AddWithValue("@fname", txtFName.Text);
                                     sqlStudent.Parameters.AddWithValue("@lname", txtLName.Text);
                                     sqlStudent.Parameters.AddWithValue("@area", txtPhoneNumber.Text.Substring(0, 3));
                                     sqlStudent.Parameters.AddWithValue("@phone", txtPhoneNumber.Text.Substring(3, 7));
                                     sqlStudent.Parameters.AddWithValue("@email", txtEmail.Text);
+                                    sqlStudent.Parameters.AddWithValue("@street", "");
+                                    sqlStudent.Parameters.AddWithValue("@city", "");
+                                    sqlStudent.Parameters.AddWithValue("@state", "");
+                                    sqlStudent.Parameters.AddWithValue("@zip", "");
+                                    sqlStudent.Parameters.AddWithValue("@standing", "");
+                                    sqlStudent.Parameters.AddWithValue("@major", "");
+
 
                                     sqlStudent.Connection = conn;
                                     sqlStudent.ExecuteNonQuery();
