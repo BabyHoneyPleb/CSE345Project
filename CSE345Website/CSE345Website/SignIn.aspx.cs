@@ -24,6 +24,7 @@ namespace CSE345Website
                     txtPass.Visible = false;
                     txtUser.Visible = false;
                     lblSignIn.Visible = false;
+                    lnkButton.Visible = false;
                     btnSignIn.Text = "Sign Out";
                 }
             }
@@ -38,7 +39,7 @@ namespace CSE345Website
                 {
                     if (!string.IsNullOrEmpty(txtUser.Text) || (!string.IsNullOrEmpty(txtPass.Text)))
                     {
-                        if (txtUser.Text.StartsWith("G"))
+                        if (txtUser.Text.StartsWith("G") && txtUser.Text.Length == 9)
                         {
                             int id_num = int.Parse(txtUser.Text.Replace("G", ""));
                             SqlConnection conn = new SqlConnection();
@@ -73,6 +74,7 @@ namespace CSE345Website
                                 {
                                     string fName = readerStudent.GetString(1);
                                     string lName = readerStudent.GetString(2);
+                                    
                                     Session["User"] = fName + " " + lName;
                                     Session["UserStatus"] = "Sign Out";
                                     Response.Redirect("~/Default");
