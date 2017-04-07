@@ -80,6 +80,7 @@ namespace CSE345Website
                                     string lName = txtLName.Text;
                                     Session["User"] = fName + " " + lName;
                                     Session["UserStatus"] = "Sign Out";
+                                    conn.Close();
                                     Response.Redirect("~/Default");
 
 
@@ -117,6 +118,7 @@ namespace CSE345Website
             {
 
             }
+
         }
 
        

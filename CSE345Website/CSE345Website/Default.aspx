@@ -16,9 +16,6 @@
                            <asp:Label ID="lblTitle" runat="server" Text="College<br/>&nbsp;&nbsp;&nbsp;Corner" CssClass="txt-title"></asp:Label>
                        </div>
                    </div>
-                  
-                 
-                   
                </asp:Panel>
                <br />
                <br />
