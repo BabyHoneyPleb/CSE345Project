@@ -139,6 +139,84 @@
        </div> 
        <div class="col-md-4">
            <asp:Panel ID="pnlRight" runat="server" CssClass="pnl-left">
+               <div>
+                   <asp:Label ID="lblSaleTitle" runat="server" Text="Items" CssClass="title-default" Font-Underline="True"></asp:Label>
+               </div>
+               <div class="row">
+                   <div class="col-md-4">
+                         <asp:Label ID="Label1" runat="server" CssClass="txt-descrip" Text="Item1"></asp:Label>
+                   </div>
+                   <div class="col-md-4">
+                        <asp:Label ID="Label2" runat="server" CssClass="txt-descrip" Text="Item2"></asp:Label>
+                   </div>
+                   <div class="col-md-4">
+                        <asp:Label ID="Label3" runat="server" CssClass="txt-descrip" Text="Item3"></asp:Label>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-4">
+                        <asp:Label ID="Label4" runat="server" CssClass="txt-descrip" Text="Item4"></asp:Label>
+                   </div>
+                   <div class="col-md-4">
+                        <asp:Label ID="Label5" runat="server" CssClass="txt-descrip" Text="Item5"></asp:Label>
+                   </div>
+                   <div class="col-md-4">
+                        <asp:Label ID="Label6" runat="server" CssClass="txt-descrip" Text="Item6"></asp:Label>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-4">
+                        <asp:Label ID="Label7" runat="server" CssClass="txt-descrip" Text="Item7"></asp:Label>
+                   </div>
+                   <div class="col-md-4">
+                        <asp:Label ID="Label8" runat="server" CssClass="txt-descrip" Text="Item8"></asp:Label>
+                   </div>
+                   <div class="col-md-4">
+                        <asp:Label ID="Label9" runat="server" CssClass="txt-descrip" Text="Item9"></asp:Label>
+                   </div>
+               </div>
+
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <div>
+                   <asp:Label ID="lblServiceTitle" runat="server" Text="Services" CssClass="title-default" Font-Underline="True"></asp:Label>
+               </div>
+                <div class="row">
+                   <div class="col-md-4">
+                         <asp:Label ID="Label10" runat="server" CssClass="txt-descrip" Text="Item1"></asp:Label>
+                   </div>
+                   <div class="col-md-4">
+                        <asp:Label ID="Label11" runat="server" CssClass="txt-descrip" Text="Item2"></asp:Label>
+                   </div>
+                   <div class="col-md-4">
+                        <asp:Label ID="Label12" runat="server" CssClass="txt-descrip" Text="Item3"></asp:Label>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-4">
+                        <asp:Label ID="Label13" runat="server" CssClass="txt-descrip" Text="Item4"></asp:Label>
+                   </div>
+                   <div class="col-md-4">
+                        <asp:Label ID="Label14" runat="server" CssClass="txt-descrip" Text="Item5"></asp:Label>
+                   </div>
+                   <div class="col-md-4">
+                        <asp:Label ID="Label15" runat="server" CssClass="txt-descrip" Text="Item6"></asp:Label>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-4">
+                        <asp:Label ID="Label16" runat="server" CssClass="txt-descrip" Text="Item7"></asp:Label>
+                   </div>
+                   <div class="col-md-4">
+                        <asp:Label ID="Label17" runat="server" CssClass="txt-descrip" Text="Item8"></asp:Label>
+                   </div>
+                   <div class="col-md-4">
+                        <asp:Label ID="Label18" runat="server" CssClass="txt-descrip" Text="Item9"></asp:Label>
+                   </div>
+               </div>
                <br />
                <br />
                <br />
@@ -160,34 +238,7 @@
                <br />
                <br />
                <br />
-               <br />    
                <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-               <br />
-              <br />
            </asp:Panel>
        </div>
    </div>
