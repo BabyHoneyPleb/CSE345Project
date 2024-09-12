@@ -52,13 +52,17 @@ namespace CSE345Website
                     lName.Text = reader.GetString(2);
                     areaCode.Text = reader.GetValue(3).ToString();
                     phone.Text = reader.GetValue(4).ToString();
+                    email.Text = reader.GetString(11);
+                 
                     street.Text = reader.GetString(5);
+                    
+                  
                     city.Text = reader.GetString(6);
                     state.Text = reader.GetString(7);
                     zipcode.Text = reader.GetValue(8).ToString();
                     standing.Text = reader.GetString(9);
                     major.Text = reader.GetString(10);
-                    email.Text = reader.GetString(11);
+                   
 
                 }
 
@@ -67,7 +71,7 @@ namespace CSE345Website
             }
             catch (Exception ex)
             {
-
+                Response.Write(ex.ToString());
             }
         }
         protected void Contact_Clicked (object sender, EventArgs e)
@@ -107,7 +111,7 @@ namespace CSE345Website
             }
             catch (Exception ex)
             {
-
+                Response.Write(ex.ToString());
             }
         }
         protected void About_Clicked(object sender, EventArgs e)
@@ -127,7 +131,7 @@ namespace CSE345Website
                 conn.Open();
 
                 SqlCommand sqlStudent = new SqlCommand();
-                sqlStudent.CommandText = "UPDATE Student SET STUD_STREET=@street, STUD_CITY=@city, STUD_STATE=@state STUD_ZIP=@zip, STUD_STANDING=@standing, STUD_MAJOR=@major" +
+                sqlStudent.CommandText = "UPDATE Student SET STUD_STREET=@street, STUD_CITY=@city, STUD_STATE=@state, STUD_ZIPCODE=@zip, STUD_STANDING=@standing, STUD_MAJOR=@major " +
                                            "WHERE STUD_ID=@id;";
                 sqlStudent.Parameters.AddWithValue("@id", (int)Session["Id"]);
                 sqlStudent.Parameters.AddWithValue("@street", street.Text);
@@ -147,6 +151,7 @@ namespace CSE345Website
             }
             catch (Exception ex)
             {
+                Response.Write(ex.ToString());
 
             }
         }
